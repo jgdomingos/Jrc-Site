@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #0084ff00;
+    border-radius: 30px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #4352FF;
+    border-radius: 30px;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-left: 450px;
+    margin-right: 450px;
+  }
+  
+  .logo {
+    font-size: 10px;
+  }
+
+  .logojrc {
+    width: 250px;
+    height: auto;
+  }
+  
+  .menu {
+    display: flex;
+    list-style-type: none;
+    margin-top: auto;
+  }
+
+  .menu li {
+    margin-right: 20px;
+  }
+  
+  .menu li a {
+    color: #fff;
+    transition: 0.4s;
+    text-decoration: none;
+  }
+
+  .menu li a:hover {
+    color: #4352FF;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 360px;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+  }
+  
+  .main {
+    flex: 1;
+    max-width: 600px;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .main h1 {
+    text-align: left;
+    font-size: 36px;
+    margin-bottom: 0px;
+  }
+  
+  .main p {
+    text-align: left;
+    text-align: justify;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  .floating-image {
+    flex: 1;
+    max-width: 400px;
+    margin-left: 50px;
+  }
+  
+  .floating-image img {
+    width: 100%;
+    animation: float 3s ease-in-out infinite alternate;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* Responsiveness */
+  @media screen and (max-width: 768px) {
+    .menu {
+      flex-direction: column;
+    }
+  
+    .menu li {
+      margin-bottom: 10px;
+    }
+  
+    .content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .floating-image {
+      margin-left: 0;
+      margin-top: 30px;
+    }
+  }
+
+  .services-section {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .services-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .services-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 200px;
+    height: 200px;
+    background-color: #ffffff;
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: 0.4s;
+  }
+  
+  .card .icon {
+    margin-right: 190px;
+  }
+
+  .card h2 {
+    text-align: left;
+    margin-top: 30px;
+    font-size: 18px;
+  }
+
+  .card:hover {
+    transform: scale(1.1);
+  }
+
+  .descricao {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .descricao.active {
+    display: block;
+  }
+
+  .justify {
+    margin-top: 30px;
+    text-align: justify;
+  }
+
+  .fixed-button {
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    z-index: 1000;
+  }
+
+  .corner-icon {
+    width: 50px;
+    height: 50px;
+    transition: 0.4s;
+  }
+
+  .corner-icon:hover {
+    transform: scale(1.1);
+  }
+
+  .footer {
+    padding-block: 50px;
+    padding-bottom: 25px;
+    background-color: #151515;
+    color: #666873;
+  }
+  
+  .footer-container {
+    max-width: 1160px;
+    margin: auto;
+    padding: 0 15px;
+  }
+  
+  .footer-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    row-gap: 20px;
+  }
+  
+  .footer-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style-type: none;
+  }
+  
+  .footer-list-link {
+    transition: color 0.25s;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #666873;
+  }
+  
+  .footer-list-link:hover {
+    color: #fff;
+  }
+  
+  .footer-divider {
+    margin-block: 25px;
+    border: none;
+    border-top: 1px solid rgb(252, 255, 255, 0.1);
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-list-bottom {
+    flex-direction: row;
+  }
+  
+  .copyright {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+/* Responsiveness */
+@media screen and (max-width: 320px) {
+  /* Ajuste o menu para empilhar em telas menores */
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu {
+    margin-top: 20px;
+  }
+
+  /* Ajuste a largura máxima do conteúdo principal */
+  .main {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Reduza o tamanho da fonte do título principal */
+  .main h1 {
+    font-size: 28px;
+  }
+
+  /* Ajuste o tamanho do botão principal */
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  /* Reduza o tamanho do ícone do canto inferior direito */
+  .corner-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Ajuste a posição do botão fixo */
+  .fixed-button {
+    bottom: 30px;
+    right: 20px;
+  }
+
+  /* Reduza o tamanho da fonte e adicione um recuo nos parágrafos */
+  .justify {
+    font-size: 16px;
+    margin: 20px;
+  }
+
+  /* Ajuste a posição das imagens flutuantes */
+  .floating-image {
+    display: none; /* ou ajuste conforme necessário */
+  }
+
+  /* Ajuste o tamanho dos cards */
+  .card {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  /* Ajuste o tamanho do rodapé */
+  .footer-container {
+    padding: 0 10px;
+  }
+
+  /* Ajuste o tamanho do ícone do rodapé */
+  .footer-list-item i {
+    font-size: 24px;
+  }
+
+  /* Mantenha o header visível */
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <!-- Lib Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/icon/logo.png" type="image/x-icon">
+    <!-- Css -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Jrc Consultoria e Legalização</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+          <div class="logo">
+            <img src="./images/logo-lateral-sem-fundo.png" alt="logo" class="img-fluid logojrc">
+          </div>
+          <ul class="menu">
+            <li><a href="#">Início</a></li>
+            <li class="dropdown">
+              <a href="#service">Serviços</a>
+              <div class="dropdown-content">
+                <!-- Itens do dropdown -->
+                <a href="#alvara">Alvará de Funcionamento</a>
+                <a href="#avcb">AVCB</a>
+                <a href="#inscricao">Inscrição Municipal (Mobiliária e Imobiliária)</a>
+                <a href="#certidao-solo">Certidão de Uso do Solo</a>
+                <a href="#certidao-negativa">Certidão Negativa de Débitos</a>
+                <a href="#consulta">Consulta Prévia</a>
+                <a href="#ambiental">Licença Ambiental</a>
+                <a href="#publicidade">Alvará de Publicidade</a>
+                <a href="#sanitaria">Licença Sanitária</a>
+                <a href="#login">Login/Senha ISS</a>
+                <a href="#extrato">Obtenção de Extrato de Débitos</a>
+                <a href="#visita">Visita Técnica em Órgão Públicos</a>
+              </div>
+            </li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+      <div class="content">
+        <div class="main" id="quemsomos">
+          <h1>JRC</h1>
+          <h1>Consultoria e Legalização</h1>
+          <p>Somos especialistas em documentação Paralegal junto à Órgãos Públicos, desde a obtenção da inscrição municipal até a emissão da licença de funcionamento e demais licenças necessárias ao funcionamento do empreendimento.</p>
+          <a href="https://wa.me/5511999225343" target="_blank"><button>Contate-nos</button></a>
+        </div>
+        <div class="floating-image">
+          <img src="./images/vector-img.png" alt="Imagem Flutuante">
+        </div>
+      </div>
+
+      <div class="services-section">
+        <a href="#service" id="service"><h1>Serviços</h1></a>
+        <p>Aqui estão nossos serviços:</p>
+        <div class="cards-container">
+          <div class="card" data-aos="fade-right" id="alvara" onclick="showDescription('descricao1')">
+            <div class="icon">
+              <img src="./images/icon-card/alvara-funcionamento.png" alt="" style="width: 50px; height: 50px;">
+            </div>
+            <h2>Alvará de Funcionamento</h2>
+          </div>
+          <div class="card" data-aos="fade-right" id="avcb" onclick="showDescription('descricao2')">
+            <div class="icon">
+              <img src="./images/icon-card/avcb.png" alt="" style="width: 50px; height: 50px;">
+            </div>
+            <h2>AVCB</h2>
+          </div>
+          <div class="card" data-aos="fade-left" id="inscricao" onclick="showDescription('descricao3')">
+            <div class="icon">
+              <img src="./images/icon-card/inscricao-municipal.png" alt="" style="width: 50px; height: 50px;">
+            </div>
+            <h2>Inscrição Municipal (Mobiliária e Imobiliária)</h2>
+          </div>
+          <div class="card" data-aos="fade-left" id="certidao-solo" onclick="showDescription('descricao4')">
+            <div class="icon">
+              <img src="./images/icon-card/uso-do-solo.png" alt="" style="width: 50px; height: 50px;">
+            </div>
+            <h2>Certidão de Uso do Solo</h2>
+          </div>
+        </div>
+
+        <div class="cards-container">
+            <div class="card" data-aos="fade-right" id="certidao-negativa" onclick="showDescription('descricao5')">
+              <div class="icon">
+                <img src="./images/icon-card/negativa-debitos.png" alt="" style="width: 50px; height: 50px;">
+              </div>
+              <h2>Certidão Negativa de Débitos</h2>
+            </div>
+            <div class="card" data-aos="fade-right" id="consulta" onclick="showDescription('descricao6')">
+              <div class="icon">
+                <img src="./images/icon-card/consulta-previa.png" alt="" style="width: 50px; height: 50px;">
+              </div>
+              <h2>Consulta Prévia</h2>
+            </div>
+            <div class="card" data-aos="fade-left" id="ambiental" onclick="showDescription('descricao7')">
+              <div class="icon">
+                <img src="./images/icon-card/licenca-ambiental.png" alt="" style="width: 50px; height: 50px;">
+              </div>
+              <h2>Licença Ambiental</h2>
+            </div>
+            <div class="card" data-aos="fade-left" id="publicidade" onclick="showDescription('descricao8')">
+              <div class="icon">
+                <img src="./images/icon-card/publicidade.png" alt="" style="width: 50px; height: 50px;">
+              </div>
+              <h2>Alvará de Publicidade</h2>
+            </div>
+          </div>
+
+          <div class="cards-container">
+            <div class="card" data-aos="fade-right" id="sanitaria" onclick="showDescription('descricao9')">
+              <div class="icon">
+                <img src="./images/icon-card/anvisa.png" alt="" style="width: 50px; height: 50px;">
+              </div>
+              <h2>Licença Sanitária</h2>
+            </div>
+            <div class="card" data-aos="fade-right" id="login" onclick="showDescription('descricao10')">
+              <div class="icon">
+                <img src="./images/icon-card/login.png" alt="" style="width: 50px; height: 50px;">
+              </div>
+              <h2>Login/Senha ISS</h2>
+            </div>
+            <div class="card" data-aos="fade-left" id="extrato" onclick="showDescription('descricao11')">
+              <div class="icon">
+                <img src="./images/icon-card/extrato.png" alt="" style="width: 50px; height: 50px;">
+              </div>
+              <h2>Obtenção Extrato de Débitos</h2>
+            </div>
+            <div class="card" data-aos="fade-left" id="visita" onclick="showDescription('descricao12')">
+              <div class="icon">
+                <img src="./images/icon-card/visita.png" alt="" style="width: 50px; height: 50px;">
+              </div>
+              <h2>Visita Técnica em Órgão Públicos</h2>
+            </div>
+          </div>
+      </div>
+
+    <!-- Botão Fixo -->
+    <div class="fixed-button">
+        <a href="https://wa.me/5511999225343" target="_blank"><img src="./images/logo-whatsapp.png" alt="Ícone" class="corner-icon"></a>
+    </div>
+
+    <!-- Tela de descrição -->
+    <div id="descricao1" class="descricao">
+        <button onclick="hideDescription('descricao1')">Fechar</button>
+        <hr>
+        <p class="justify">Um alvará de funcionamento é um documento emitido pela autoridade competente, como a prefeitura ou outro órgão governamental responsável, que autoriza uma empresa, estabelecimento comercial ou local a operar legalmente em determinada área. Esse documento geralmente é concedido após a verificação de que o estabelecimento cumpre com todas as normas e regulamentos exigidos para a sua operação, incluindo questões de segurança, saúde, zoneamento, entre outros. O alvará de funcionamento é essencial para garantir que um negócio opere dentro da lei e em conformidade com as regulamentações locais.</p>
+    </div>
+    <div id="descricao2" class="descricao">
+        <button onclick="hideDescription('descricao2')">Fechar</button>
+        <hr>
+        <p class="justify">AVCB significa "Auto de Vistoria do Corpo de Bombeiros". É um documento emitido pelo Corpo de Bombeiros da região onde está localizado um estabelecimento, e atesta que o local foi vistoriado e está em conformidade com as normas de segurança contra incêndio e pânico.</p>
+    </div>
+    <div id="descricao3" class="descricao">
+        <button onclick="hideDescription('descricao3')">Fechar</button>
+        <hr>
+        <p class="justify">A inscrição municipal é um registro feito junto à prefeitura ou órgão municipal competente, que identifica um estabelecimento ou pessoa jurídica para fins tributários e administrativos. É através da inscrição municipal que a prefeitura acompanha e controla as atividades econômicas dentro de sua jurisdição, além de facilitar a cobrança de tributos municipais, como o Imposto sobre Serviços de Qualquer Natureza (ISSQN) e o Imposto Predial e Territorial Urbano (IPTU), dependendo da legislação local.</p>
+    </div>
+    <div id="descricao4" class="descricao">
+        <button onclick="hideDescription('descricao4')">Fechar</button>
+        <hr>
+        <p class="justify">A Certidão de Uso do Solo é um documento emitido pela prefeitura ou órgão municipal responsável, que certifica a destinação permitida para determinado imóvel de acordo com as normas de zoneamento urbano e uso do solo estabelecidas pelo plano diretor da cidade.</p>
+    </div>
+    <div id="descricao5" class="descricao">
+        <button onclick="hideDescription('descricao5')">Fechar</button>
+        <hr>
+        <p class="justify">A Certidão Negativa de Débitos (CND) é um documento emitido por órgãos governamentais, como a Receita Federal, Secretaria da Fazenda Estadual ou Secretaria da Fazenda Municipal, que atesta a inexistência de pendências financeiras ou tributárias por parte de uma pessoa física ou jurídica em relação a determinados tributos.</p>
+    </div>
+    <div id="descricao6" class="descricao">
+        <button onclick="hideDescription('descricao6')">Fechar</button>
+        <hr>
+        <p class="justify">A Consulta Prévia é um procedimento realizado junto à prefeitura ou órgão municipal responsável antes de iniciar qualquer empreendimento ou atividade em um determinado local. Esse procedimento visa verificar a viabilidade de instalação do negócio ou realização da atividade de acordo com as normas urbanísticas e legislação vigente.</p>
+    </div>
+    <div id="descricao7" class="descricao">
+        <button onclick="hideDescription('descricao7')">Fechar</button>
+        <hr>
+        <p class="justify">A Licença Ambiental é um documento emitido por órgãos ambientais competentes, como as secretarias estaduais ou municipais de meio ambiente, ou órgãos federais, dependendo da natureza e do porte do empreendimento. Ela é necessária para autorizar e regular atividades que possam causar impactos ao meio ambiente.</p>
+    </div>
+    <div id="descricao8" class="descricao">
+        <button onclick="hideDescription('descricao8')">Fechar</button>
+        <hr>
+        <p class="justify">O Alvará de Publicidade é um documento emitido pelas autoridades municipais responsáveis pelo planejamento urbano e regulamentação de publicidade em espaços públicos e privados. Esse documento autoriza a instalação e exibição de elementos publicitários nas fachadas dos imóveis, como painéis, outdoors, letreiros luminosos, entre outros.</p>
+    </div>
+    <div id="descricao9" class="descricao">
+        <button onclick="hideDescription('descricao9')">Fechar</button>
+        <hr>
+        <p class="justify">A Licença Sanitária é um documento emitido pelas autoridades de saúde competentes, geralmente a Vigilância Sanitária, que atesta que um estabelecimento comercial, industrial ou de serviços cumpre com as normas e regulamentos sanitários necessários para operar de forma segura e higiênica.</p>
+    </div>
+    <div id="descricao10" class="descricao">
+        <button onclick="hideDescription('descricao10')">Fechar</button>
+        <hr>
+        <p class="justify">Cadastramento e homologação no sistema de recolhimento de ISS (NFS-e) junto às prefeituras para escrituração e emissão de guias de pagamento do ISS (próprio e terceiros)</p>
+    </div>
+    <div id="descricao11" class="descricao">
+        <button onclick="hideDescription('descricao11')">Fechar</button>
+        <hr>
+        <p class="justify">A obtenção de um extrato de débitos refere-se à solicitação ou consulta de informações sobre quaisquer dívidas ou débitos que uma pessoa física ou jurídica possa ter. Esses débitos podem estar relacionados a impostos, taxas, contas de serviços públicos, empréstimos, financiamentos ou outras obrigações financeiras.</p>
+    </div>
+    <div id="descricao12" class="descricao">
+        <button onclick="hideDescription('descricao12')">Fechar</button>
+        <hr>
+        <p class="justify">
+            Uma visita técnica em órgãos públicos refere-se a uma atividade na qual profissionais ou especialistas, muitas vezes representantes de empresas, realizam uma visita a um órgão governamental com o objetivo de adquirir conhecimento prático sobre determinados processos. </p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-top">
+            <div>
+              <h6 class="footer-title" id="contato">Contato</h6>
+              <ul class="footer-list">
+                <li class="footer-list-item">
+                  <a href="https://wa.me/5511999225343" target="_blank" class="footer-list-link">Whatsapp</a>
+                </li>
+                <li>
+                  <a href="mailto:rgsdomingos@gmail.com" target="_blank" class="footer-list-link">Email</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h6 class="footer-title">Página</h6>
+              <ul class="footer-list">
+                <li class="footer-list-item">
+                  <a href="#quemsomos" class="footer-list-link">Quem somos</a>
+                </li>
+                <li class="footer-list-item">
+                    <a href="#service" class="footer-list-link">Serviços</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr class="footer-divider">
+          <div class="footer-bottom">
+            <span class="copyright">&copy;2024 JRC Consultoria e Legalização | Todos os Direitos Reservados</span>
+            <ul class="footer-list footer-list--bottom">
+              <li class="footer-list-item">
+                <a href="" class="footer-list-item">
+                  <i class="ri-instagram-circle-line"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+    <!-- Bootstrap Js-->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- JavaScript -->
+    <script src="index.js"></script>
+    <!-- Lib Animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>
